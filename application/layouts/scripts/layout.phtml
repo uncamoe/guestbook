@@ -1,0 +1,31 @@
+<?php echo $this->doctype(); ?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+       <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+       <title>Quickstart Application</title>
+       <?php //echo $this->headlink()->appendStylesheet('/css/global.css'); ?>
+       <style type="text/css">
+       <!--
+       #header {
+           background: #eee;
+           height: 30px;
+       }
+       #headerLogo {
+           float: left;
+       }
+       #headerNavigation {
+           float: right;
+       }
+       -->
+       </style>
+    </head>
+    <body>
+        <div id="header"> 
+            <div id="headerLogo"></div>
+            <div id="headerNavigation">
+                <a href="<?php echo $this->url(array('controller'=>'guestbook'),'default',true) ?>">Guestbook</a>
+            </div>
+        </div>
+       <?php echo $this->layout()->content; ?> 
+    </body>
+</html>
