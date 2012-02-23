@@ -7,12 +7,7 @@
         </p>
         <p>
             Guestbook Entries:
-            <br />
-        <dl>
-            <?php foreach($this->entries as $entry): ?>
-            <dt><?php $this->escape($entry->email); ?></dt>
-            <dd><?php $this->escape($entry->comment); ?></dd>
-            <?php endforeach; ?>
-        </dl>
+            <hr />
+            <?php echo $this->gb_table; ?>
         </p>
 </div>
