@@ -16,6 +16,10 @@
           <actionMethod actionName="index"/>
           <actionMethod actionName="sign"/>
         </controllerFile>
+        <controllerFile controllerName="About">
+          <actionMethod actionName="index"/>
+          <actionMethod actionName="us"/>
+        </controllerFile>
       </controllersDirectory>
       <formsDirectory>
         <formFile formName="Guestbook"/>
@@ -28,6 +32,8 @@
       <modelsDirectory>
         <modelFile modelName="GuestbookMapper"/>
         <modelFile modelName="Guestbook"/>
+        <modelFile modelName="About"/>
+        <modelFile modelName="AboutMapper"/>
       </modelsDirectory>
       <modulesDirectory enabled="false"/>
       <viewsDirectory>
@@ -43,6 +49,12 @@
           </viewControllerScriptsDirectory>
           <viewControllerScriptsDirectory forControllerName="Guestbook">
             <viewScriptFile forActionName="sign"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="About">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="About">
+            <viewScriptFile forActionName="us"/>
           </viewControllerScriptsDirectory>
         </viewScriptsDirectory>
         <viewHelpersDirectory/>

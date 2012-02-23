@@ -7,9 +7,10 @@ class Application_Form_Guestbook extends Zend_Form
     {
         /* Form Elements & Other Definitions Here ... */
         // set method for display form to post
-        $this->setMethod('post');
+        $this->setAction('guestbook/process')
+             ->setMethod('post');
         
-        // add email el
+        // add email element
         $this->addElement('text','email',array(
             'label' => 'Your Email Address:',
             'required' => true, 
@@ -49,4 +50,3 @@ class Application_Form_Guestbook extends Zend_Form
 
 
 }
-
