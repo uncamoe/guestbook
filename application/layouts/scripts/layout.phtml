@@ -3,30 +3,17 @@
     <head>
        <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
        <title>Quickstart Application</title>
-       <?php //echo $this->headlink()->appendStylesheet('/css/global.css'); ?>
-       <style type="text/css">
-       <!--
-       #header {
-           background: #eee;
-           height: 30px;
-       }
-       #headerLogo {
-           float: left;
-       }
-       #headerNavigation {
-           float: right;
-       }
-       -->
-       </style>
-    </head>
+       <?php echo $this->headlink()->appendStylesheet('/quickstart/css/styles.css'); ?>
     <body>
         <div id="header"> 
-            <div id="headerLogo"></div>
+            <div id="headerLogo">SN llc</div>
             <div id="headerNavigation">
                 <a href="<?php echo $this->url(array('controller'=>'guestbook'),'default',true) ?>">Guestbook</a>
                 <a href="<?php echo $this->url(array('controller'=>'about'), 'default',true); ?>">About Us</a>
             </div>
         </div>
-       <?php echo $this->layout()->content; ?> 
+        <div id="contentMain">
+            <?php echo $this->layout()->content; ?> 
+        </div>
     </body>
 </html>

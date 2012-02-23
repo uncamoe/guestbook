@@ -8,6 +8,7 @@ class Application_Form_Guestbook extends Zend_Form
         /* Form Elements & Other Definitions Here ... */
         // set method for display form to post
         $this->setMethod('post');
+        $this->setAttrib('id', 'sign_gb');
         
         // add email element
         $this->addElement('text','email',array(
@@ -29,7 +30,7 @@ class Application_Form_Guestbook extends Zend_Form
             'label' => 'Please Comment',
             'required' => true,
             'validators' => array(
-                array('validator' => 'StringLength', 'options' => array(0, 20))
+                array('validator' => 'StringLength', 'options' => array(0, 80))
             )
         ));
         // add captcha
