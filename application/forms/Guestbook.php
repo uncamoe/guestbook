@@ -2,13 +2,12 @@
 
 class Application_Form_Guestbook extends Zend_Form
 {
-
+   
     public function init()
     {
         /* Form Elements & Other Definitions Here ... */
         // set method for display form to post
-        $this->setAction('guestbook/process')
-             ->setMethod('post');
+        $this->setMethod('post');
         
         // add email element
         $this->addElement('text','email',array(
@@ -19,6 +18,12 @@ class Application_Form_Guestbook extends Zend_Form
                 'EmailAddress',
                 )
             ));
+        
+        // add hidden created element
+        $dt = date('Y-m-d H:i:s');
+        $this->addElement('hidden', 'created', array('value' => $dt));
+
+        
         // add comment element
         $this->addElement('textarea','comment',  array(
             'label' => 'Please Comment',
